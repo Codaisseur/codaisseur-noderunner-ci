@@ -12,7 +12,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN n 8.1.3
 
 RUN mkdir -p /app && \
-  chown -R codewarrior /app
+  chown -R codewarrior /app && \
+  npm install -g typescript tslint
 
 WORKDIR /app
 
